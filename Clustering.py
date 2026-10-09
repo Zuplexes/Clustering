@@ -25,7 +25,8 @@ X = np.array(X)
 K = 3
 m = 2
 C = np.zeros((K, X.shape[1]))
-mu = np.random.rand(len(X), K)
+rng = np.random.default_rng(42)
+mu = rng.random((len(X), K))
 
 # 3. คำนวณด้วยสูตรเดียวกับตัวอย่าง
 # for _ in range(100):
